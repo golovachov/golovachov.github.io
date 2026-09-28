@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Михайло & ♥ | 21.11.2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            color: #3f3a36;
+            background: #faf8f4;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .container {
+            width: min(900px, 100%);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                    linear-gradient(
+                            rgba(250,248,244,.45),
+                            rgba(250,248,244,.75)
+                    ),
+                    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80")
+                    center / cover no-repeat;
+        }
+
+        .hero-content {
+            background: rgba(255,255,255,.70);
+            backdrop-filter: blur(6px);
+            padding: 60px 45px;
+            border-radius: 4px;
+            max-width: 700px;
+        }
+
+        .small-text {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: .8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(4rem, 10vw, 7rem);
+            line-height: .9;
+        }
+
+        .and {
+            font-size: .45em;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .date {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+        }
+
+        /* INVITATION */
+
+        .invitation p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* DATE */
+
+        .date-section {
+            background: #ebe5dc;
+        }
+
+        .big-date {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(4rem, 12vw, 7rem);
+            margin-bottom: 10px;
+        }
+
+        /* TIMELINE */
+
+        .timeline {
+            margin-top: 50px;
+            display: grid;
+            gap: 30px;
+        }
+
+        .event {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 30px;
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .time {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2rem;
+        }
+
+        .event h3 {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        /* LOCATION */
+
+        .location-name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 2rem;
+            margin: 20px 0 5px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 30px;
+
+            text-decoration: none;
+            color: #3f3a36;
+
+            border: 1px solid #3f3a36;
+            transition: .2s;
+        }
+
+        .button:hover {
+            background: #3f3a36;
+            color: white;
+        }
+
+        /* RSVP */
+
+        .rsvp {
+            background: #ebe5dc;
+        }
+
+        .form {
+            max-width: 500px;
+            margin: 40px auto 0;
+            display: grid;
+            gap: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #c8c0b6;
+            background: rgba(255,255,255,.7);
+
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 15px;
+            border: none;
+
+            background: #3f3a36;
+            color: white;
+
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.4rem;
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 65px 20px;
+            }
+
+            h2 {
+                font-size: 2.4rem;
+            }
+
+            .hero-content {
+                margin: 20px;
+                padding: 45px 20px;
+            }
+
+            .event {
+                grid-template-columns: 70px 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-text">
+            Запрошуємо на наше весілля
+        </div>
+
+        <h1>
+            Михайло
+            <span class="and">&</span>
+            Олена
+        </h1>
+
+        <div class="date">
+            21 · 11 · 2026
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INVITATION -->
+
+<section class="invitation">
+
+    <div class="container">
+
+        <h2>Дорогі рідні та друзі</h2>
+
+        <p>
+            У нашому житті наближається особливий день,
+            і ми дуже хочемо розділити його разом з вами.
+            Запрошуємо вас стати частиною нашого весілля,
+            провести цей день поруч та створити разом
+            теплі спогади, які залишаться з нами назавжди.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- DATE -->
+
+<section class="date-section">
+
+    <div class="container">
+
+        <div class="small-text">
+            Збережіть дату
+        </div>
+
+        <div class="big-date">
+            21.11.26
+        </div>
+
+        <p>Субота</p>
+
+    </div>
+
+</section>
+
+
+<!-- PROGRAM -->
+
+<section>
+
+    <div class="container">
+
+        <h2>Програма дня</h2>
+
+        <div class="timeline">
+
+            <div class="event">
+                <div class="time">14:00</div>
+
+                <div>
+                    <h3>Зустріч гостей</h3>
+                    <p>
+                        Збираємося, знайомимося та готуємося
+                        до початку нашого свята.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="time">15:00</div>
+
+                <div>
+                    <h3>Весільна церемонія</h3>
+                    <p>
+                        Найважливіший момент цього дня.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="time">16:00</div>
+
+                <div>
+                    <h3>Святкова вечеря</h3>
+                    <p>
+                        Смачна їжа, музика, танці та хороша компанія.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="time">23:00</div>
+
+                <div>
+                    <h3>Завершення вечора</h3>
+                    <p>
+                        Але хороші спогади тільки починаються :)
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="date-section">
+
+    <div class="container">
+
+        <h2>Місце святкування</h2>
+
+        <div class="location-name">
+            Villa Park
+        </div>
+
+        <p>
+            м. Вінниця
+        </p>
+
+        <a
+                class="button"
+                href="https://maps.google.com"
+                target="_blank"
+        >
+            Відкрити на карті
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- RSVP -->
+
+<section class="rsvp">
+
+    <div class="container">
+
+        <h2>Будемо раді вас бачити</h2>
+
+        <p>
+            Будь ласка, підтвердіть свою присутність
+            до 1 листопада.
+        </p>
+
+        <form class="form">
+
+            <input
+                    type="text"
+                    placeholder="Ваше ім'я та прізвище"
+            >
+
+            <select>
+                <option>Я буду на весіллі</option>
+                <option>На жаль, не зможу бути</option>
+            </select>
+
+            <select>
+                <option>Алкоголь — не обрано</option>
+                <option>Вино</option>
+                <option>Шампанське</option>
+                <option>Віскі</option>
+                <option>Горілка</option>
+                <option>Не вживаю алкоголь</option>
+            </select>
+
+            <select>
+                <option>Чи потрібне проживання?</option>
+                <option>Так</option>
+                <option>Ні</option>
+            </select>
+
+            <textarea
+                    placeholder="Коментар або побажання"
+            ></textarea>
+
+            <button type="submit">
+                Відправити відповідь
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+    З любов'ю, Михайло & Олена 🤍
+</footer>
+
+</body>
+</html>
