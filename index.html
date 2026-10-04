@@ -54,15 +54,21 @@
         .floral-block {
             --flower-size: clamp(140px, 18vw, 260px);
             position: relative;
+            z-index: 0;
             isolation: isolate;
             overflow: hidden;
+        }
+
+        .floral-block > * {
+            position: relative;
+            z-index: 1;
         }
 
         .floral-block::before,
         .floral-block::after {
             content: "";
             position: absolute;
-            z-index: -1;
+            z-index: 0;
             width: var(--flower-size);
             height: var(--flower-size);
             background: url("assets/floral-corner.png") center / contain no-repeat;
@@ -211,7 +217,8 @@
         /* RSVP */
 
         .rsvp {
-            background: #ebe5dc;
+            background: #fff;
+            color: #3f3a36;
         }
 
         .form {
